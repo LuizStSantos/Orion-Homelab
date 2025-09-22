@@ -19,7 +19,7 @@ The goal of Orion is to provide a scalable and secure lab environment for daily 
 #
 📂 Project Structure
 
-    RIGELORION/
+    ORION/
     ├── affine/              # Affine (collaboration / knowledge management)
     │   ├── AFFINE.md
     │   ├── docker-compose.yml
