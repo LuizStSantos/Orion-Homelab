@@ -1,0 +1,24 @@
+# dash./docker-compose.yml
+services:
+  dash:
+    image: mauricenino/dashdot:nvidia
+    restart: unless-stopped
+    privileged: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+                - gpu
+    ports:
+      - '3001:3001'
+    volumes:
+      - /:/mnt/host:ro
+    environment:
+      DASHDOT_WIDGET_LIST: 'os,cpu,storage,ram,network,gpu'
+    networks:
+      - cloudflared
+
+networks:
+  cloudflared:
+    external: true

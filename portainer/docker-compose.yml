@@ -1,0 +1,21 @@
+# portainer/docker-compose.yml
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    command: -H unix:///var/run/docker.sock
+    ports:
+      - "9443:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+      - cloudflared
+
+networks: 
+  cloudflared:
+    external: true
+
+volumes:
+  portainer_data:
