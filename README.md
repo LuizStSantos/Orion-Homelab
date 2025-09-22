@@ -13,7 +13,7 @@ This setup focuses on:
 
 - 📊 Visibility → Dashboards (Homarr + custom Dash) keep everything in one place.
 
-⚡ Management → Portainer for direct container m- onitoring and control.
+- ⚡ Management → Portainer for direct container m- onitoring and control.
 
 The goal of Orion is to provide a scalable and secure lab environment for daily use, testing, and self-hosting experiments — fully under my control.
 #
